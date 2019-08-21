@@ -1,0 +1,47 @@
+{%extends "layout.html"%}
+{%block content%}
+
+
+<h1 style="text-align:center;"><b>Tkinter <small>1</small></b></h1>
+
+<video width="400" controls>
+<source src="../static/videos/sqlite-demo.ogg" type="video/mp4">
+</video><br>
+<small>Final project Bookstore manager with Tkinter and sqlite.</small><br>
+<a href="https://www.youtube.com/watch?v=6sxOsKGVM9w">Escape and jump to Video tutorial</a><br><br>
+<p><b>Python</b> by default is a text base programming language, for this reason if we wanna have graphical user interface with it, we need to use extra framework "module".</p>
+<p>There are many choices for Gui programming in python, for example:
+
+<b>WxPython, PyGui, Pyside, Tkinter, Pyqt</b> and ...
+</p>
+
+Tkinter have some pros and cons:<br>
+
+<b>pros:</b>1) Its part of the standard library so you dont need to download any extra module.<br>
+2) Have large community, its simple and many programmers use it even for writing some basic games.<br>
+3) Its cross platform you can use it on windows, linux and mac and it worth to mention that written by <b><i>Fredrik Lundh</i></b> so thanks Fredrik.<br>
+<br>
+<b>Cons:</b>
+1) Its ugly, well thats what some programmers say a bout it but its a mater of personal taste.<br>
+2) It doesn't have pythonic look!<br>
+3) its not naturally part of the python, its just a wrapper around the TK and Tci module which is interpreted embedded in python interpreter. <br>
+
+But worth to mention that Tkinter can be used by other languages as well so thats some a plus. in Tkinter we are dealing with Widgets and events same as Pygame or Turtle.<br>
+Because every program that have constant interaction with user is <b>Event Driven</b> Program. as i mentioned before Tkinter is part of python standard library, so the only thing we need to do is to import it.
+
+In first example we are going to create a main window. same as what we do when working with Pygame or turtle to create the screen.
+
+so we create a main window and call the main loop to keep it up and running.
+<br>
+<img src="../static/img/tkinter/1.jpg" alt=""><br><br>
+Its very possible to use only functions to create a gui by tkinter but it can be a good idea to use Classes as our programs grows so we can go by <b>DRY</b> principle which means <i>Dont repeat yoursel</i>.<br>
+
+Now it could be a good time to write the same code using classes:
+<br>
+<img src="../static/img/tkinter/2.jpg" alt=""><br><br>
+
+<a href="{{url_for('tkinter_2')}}"><b>--></b></a>
+<br><br>
+
+
+{%endblock%}

@@ -1,0 +1,130 @@
+{%extends "layout.html"%}
+{%block content%}
+
+  <br><br>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h1 style="text-align:center";><b><i><font color="blue">Python</font></i></b></h1>
+      <small style="text-align:center" >
+        <font color="blue">
+        >>> class Complex: <br>
+
+        ...     def __init__(self, realpart, imagpart):<br>
+        ...         self.r = realpart <br>
+        ...         self.i = imagpart <br>
+        ... <br>
+
+        >>> x = Complex(3.0, -4.5) <br>
+        >>> x.r, x.i <br>
+        (3.0, -4.5) <br>
+        </font>
+      </small>>
+
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i><font color="blue">Flask </font></i></b></h1>
+      <small style="text-align:center";>
+        <font color="blue">
+        from flask import Flask <br>
+        app = Flask(__name__)<br>
+
+        @app.route('/')<br>
+        def hello_world():<br>
+        ....return 'Hello, World!'<br>
+        </font>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i><font color="green">SQLite</font></i></b></h1>
+      <small>
+        <font color="green">
+        sqlite> .tables <br>
+        albums          employees       invoices        playlists <br>
+        artists         genres          media_types     tracks <br>
+        customers       invoice_items   playlist_track <br>
+        </font>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i><font color="green">PostgreSQL</font></i></b></h1>
+      <small>
+        <font color="green">
+        insert into employee (ID, name,    salary, start_date, city,       region)<br>
+                         values (1,  'Jason', 40420,  '02/01/94', 'New York', 'W');<br>
+        </font>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i>HTML</i></b></h1>
+      <small>
+        <h2 title="I'm a header">The title Attribute</h2><br>
+        Mouse over this paragraph, to display the title attribute as a tooltip.<br>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i><font color="red">C</font><font color="green">S</font><font color="blue">S</font></i></b></h1>
+      <small><font color="red">Cascading </font> <font color="green"> Style </font> <font color="blue">Sheets </font></small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i>Web developing</i></b></h1>
+      <small>
+        <p>the work involved in developing a web site for the Internet or an intranet.<br>
+           Web development can range from developing a simple single static page of plain text to complex web-based internet applications,<br>
+            electronic businesses, and social network services.</p>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i><font color="orange">Pygame</font></i></b></h1>
+      <small>
+        <font color="orange">
+        import pygame <br>
+        # Define some colors <br>
+        BLACK = (0, 0, 0) <br>
+        WHITE = (255, 255, 255) <br>
+        GREEN = (0, 255, 0) <br>
+        RED = (255, 0, 0) <br>
+         <br>
+        pygame.init() <br>
+         <br>
+        # Set the width and height of the screen [width, height] <br>
+        size = (700, 500)<br>
+        screen = pygame.display.set_mode(size)<br>
+        </font>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i>Turtle</i></b></h1>
+      <small>
+        <font color="red">
+        import turtle <br>
+        <br>
+        spiral = turtle.Turtle()<br>
+        <br>
+        for i in range(20):<br>
+        ....spiral.forward(i * 10)<br>
+        ....spiral.right(144)<br>
+        <br>
+        turtle.done()
+        </font>
+      </small>
+    </div>
+    <div class="carousel-item">
+      <h1 style="text-align:center";><b><i>Game developing</i></b></h1>
+      <small>
+        Process of creating a video game. The effort is undertaken by a developer,<br>
+        ranging from a single person to an international team dispersed across the globe. <br>
+      </small>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+{%endblock content%}

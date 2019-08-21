@@ -1,0 +1,28 @@
+{%extends "layout.html"%}
+{%block content%}
+<h1 style="text-align:center;"><b>Socket<small> 2</small></b></h1><br>
+<a href="{{url_for('socket')}}"><--</a><br>
+
+<b>Server</b><br>
+<p>Now lets script two sockets and connect them. they can connect from two separate locations or within the same machine.
+<br>
+for this tutorial we are going to create both sockets on the same machine(Local host)</p>
+
+First thing first, we need to import the module and happily unlike <b>Socket programming in C</b><small>'With all do respect'</small> our job will be much easier, of cource we wont have some of the low level controls over our codes but we can get our code up and run in no time.
+<br>
+
+<img src="../static/img/socket/server_code1.jpg" alt=""><br>
+<p>we need to provide ip or host name, it can be wwww.google.com or any given ip.<b>socket.gethostname()</b>method gets the name of the local machine
+which is <b>127.0.0.1</b>. also we need to specify port number, here we usee 5000 and the only advantage of choosing it is the fact
+Operating system doesnt use it and its none of default ports, so you can use any port as long as it's not part of the default ports like 80, 145, 23 ... </p>
+In the next line <b>server</b> s an object of <b>socket</b> class. there would be more parameters that we can use but for now lets keep it simple as possible.
+<img src="../static/img/socket/server_code2.jpg" alt=""><br>
+now with <b>bind()</b> method we actually bind ip, port to the socket. basically our server is online "in our case localy" waiting for connection.<br>
+<img src="../static/img/socket/server_code3.jpg" alt=""><br>
+We create two variables <b>connection</b> and <b>address</b> they can be anything as naming goes but as always it's better to choose meaningful variable to makes our code easier to read. <b>accept()</b> method returns an open connection between the server and client, along with the address of the client. The connection is a different socket "we are going to script it".
+Now using <b>while loop</b> server constantly is listening for connection and now is possible to send and recieve data between the nodes.
+<br>
+<a href="{{url_for('socket')}}"><b><-- </b></a><a href="{{url_for('socket_3')}}"><b> --></b></a>
+
+<br><br>
+{%endblock content%}

@@ -1,0 +1,57 @@
+{%extends "layout.html"%}
+{%block content%}
+<a href="{{url_for('sqlite')}}"><b><--</b></a>
+<h3><b>---------- Insert new records ----------</b></h3>
+<i><b>
+  name="jack"<br>
+  phone = "54677488"<br>
+  address = "Oslo ringgata 89"<br>
+  cursor.execute("""INSERT INTO contacts(Name, Phone) VALUES(?,?)""",\(name,phone))<br>
+  db.commit()<br>
+</b></i>
+<p>First we get the values and then insert them by:</p>
+
+<i><b>("""INSERT INTO name of the table (record's name)VALUES(? = placeholder)"""(Variable))</b></i>
+
+<p>and finally we got to confirm the command by commit() method.</p>
+
+<i><b>db.commit()</b></i>
+<p>any changes regarding the records in database need to be confirmed by <i><b>commit()</b></i> method.</p>
+
+<p>As you see we are keeping the data in some sort of dictionary style data structure. and the best is  to use ? for place holder rather than python string format methods, to avoid mistakes.</p>
+
+<p><b>R for read</b></p>
+<h3><b>---------- Display available records ----------</b></h3>
+<p>One of the most important aspects of any database is to display the data. and ability to run queries.</p>
+<p>Whats query?</p>
+<p>A database query extracts data from a database and formats it in a readable form</p>
+<p>Lets run a basic query and get a list of all records available in our database.
+  as you remember to run SQLite commands we need to use cursor() method:
+</p>
+<i><b>cursor.execute("SELECT NAME, Phone FROM contacts")</b></i><br>
+<i><b>result = cursor.fetchall()</b></i><br>
+<i><b>for row in result:</b></i><br>
+<i><b>....print(row)</b></i><br><br>
+
+<i><b>result = cursor.execute("SELECT record's name, table's name")</b></i><br>
+<p>by this way we get the data from selected record and table, stor it in variable (result) as an 2D array, so now by simple for loop we can display the records.</p>
+<p>As you see here we didnt use <b>commit()</b> method we havent made any changes regarding records or database structure (TABLE).</p><br>
+
+<b>U for update</b>
+<h3><b>---------- Update data (records) ----------</b></h3>
+<p>
+  to update a given record in database we will use <b>mutator</b> method.
+  to change the existence value to the new one, so lets say one of our contacts changed his/her number now we simply can update the database using <b>UPDATE / SET</b>.
+</p>
+<i><b>new_phone_number = 12345434</b></i><br>
+<i><b>cursor.execute("""UPDATE contacts SET Phone = ? WHERE name = ?""",(new_phone_number))</b></i><br>
+<i><b>db.commit()</b></i><br>
+<p>The general and basic structure for updating a record is based on <b>WHERE</b> command and setting the new value to given record</p>
+<p>WHat i need to mention here is getting query and updating records based on Name or tables is not best way and mostly it should be done by <b>id primarykey</b></p>
+<p>But here for the sake of simplicity we use name in our tale as a query base</p>
+<i><b>cursor.execute('''UPDATE table's name  SET record's name  = ? WHERE Name =?''', (new value))</b></i>
+<p>We are using <b>Mutator/Setter</b> method to update the value in database for given record.</p>
+ <a href="{{url_for('sqlite')}}"><b><--  </b></a><a href="{{url_for('sqlite_3')}}"><b>  --></b></a> <br>
+
+
+{%endblock content%}

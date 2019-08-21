@@ -1,0 +1,32 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<h1 style="text-align:center;"><b>Tkinter <small>3</small></b></h1>
+<a href="{{url_for('tkinter_2')}}"> <b> <--</b></a><br><br>
+
+<b>Button and command</b><br><br>
+
+With <b>button</b> widget we can connect function to the gui, and make the button do something for us, it can be simple print, exit or anything depending on a program.
+
+to create a button we call <b>tkinter.Button(position, text, command)</b> method.<br>
+
+<b>Position</b> = where the button going to be, for example on main_window or top frame.<br>
+
+<b>Text</b> = text on the button which can be anything we want like, ok, Exit or...<br>
+
+<b>Command</b> = a function or method that by clicking the button will be called.<br>
+
+lets create a gui class with one button and one method for it.<br><br>
+
+<img src="../static/img/tkinter/5.jpg" alt=""><br><br>
+Now lets change the function the way that instead of printing text on command line show the response on messagebox but first we need to import <b>messagebox</b> from tkinter. and call it from click method.
+<br><br>
+<img src="../static/img/tkinter/6.jpg" alt=""><br><br>
+We can use <b>tkinter.messagebox</b> by calling it in function or method, the first argument title bar text and second will be the actual message.
+<br>
+<a href="{{url_for('tkinter_2')}}"> <b><-- </b></a>
+<a href="{{url_for('tkinter_4')}}"> <b> --></b></a><br><br>
+
+
+
+{%endblock content%}

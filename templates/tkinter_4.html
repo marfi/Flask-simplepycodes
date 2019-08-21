@@ -1,0 +1,44 @@
+{%extends "layout.html"%}
+{%block content%}
+
+
+<h1 style="text-align:center;"><b>Tkinter <small>4</small></b></h1>
+<a href="{{url_for('tkinter_3')}}"><b>  <--</b></a><br><br>
+<b>Entry widget</b>
+
+Entry widget allow us to get data from user so take it as tkinter's <b>input()</b> method.
+
+Now lets create another simple gui and get some input from user by entry widget.<br><br>
+
+<img src="../static/img/tkinter/7.jpg" alt=""><br><br>
+
+As you see we create an entry widget by <b>tkinter.Entry(master, width =n)</b>
+
+and to get input in entry window as Data we need to use <b>entry.get()</b> method like <i>entry_data = Entry.get()</i>.<br>
+
+
+
+<a href="{{url_for('tkinter_3')}}">previous</a><br><br>
+But messagebox is not the only method to display information in tkinter, we can even do it by changing <b>labels</b> text while program is running. lets create simple <b>convertor</b> that convert kilometer to miles and instead of display information with messagebox do it with <b>label</b>.
+because maybe sometimes we dont need to have extra window openning over and over to display some message.<br>
+
+
+
+<b>Display mesaage on Label with StringVar</b><br>
+
+In below example we create very simple converter program which get the kilometer and return miles.
+
+<b>StringVar</b> can be changed on run time, so we create a label and instead of text we set the <b>textvariable</b> to value which is already set to StringVar, and in calculate method change it to miles, so by this way we can show the result of calculation on label.<br><br>
+<img src="../static/img/tkinter/8.jpg" alt=""><br>
+And when we run the program Label will display the results of calculation.
+Take a look at next Image:<br>
+<img src="../static/img/tkinter/9.jpg" alt=""><br><br>
+
+<a href="{{url_for('tkinter_3')}}"><b><-- </a>
+<a href="{{url_for('tkinter_5')}}"><b> -->  </b></a><br><br>
+<br><br>
+
+
+
+
+{%endblock content%}

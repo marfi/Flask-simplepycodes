@@ -1,0 +1,25 @@
+{%extends "layout.html"%}
+{%block content%}
+
+
+<h1 style="text-align:center;"><b>Tkinter <small>2</small></b></h1>
+<a href="{{url_for('tkinter')}}"><b><--</b></a><br><br>
+
+Lets improve our gui by changing the <b>title</b> of main window and create a <b>Label</b> to display a text.
+
+First we create an <i>object</i> from tkinter <b>Label</b> and specify the position of the label which is on the main window then place it on the window by using <b>pack()</b> method.
+<br><br>
+<img src="../static/img/tkinter/3.jpg" alt=""><br><br>
+By creating main_window we have only one frame or window to work with, but imagine we can split the main window by invisible line in to the two separate <b>frames</b>.<br>
+By using <b>Frame()</b> method in tkinter we can create as many as frames we want on main window, and as other widgets we have to place them on the main window or root or master screen and basically we can gain more control over our gui.
+<br><br>
+<img src="../static/img/tkinter/4.jpg" alt=""><br><br>
+<a href="{{url_for('tkinter')}}"><b><-- </b></a>
+<a href="{{url_for('tkinter_3')}}"> <b> --></b></a>
+<br><br>
+
+
+
+
+
+{%endblock content%}

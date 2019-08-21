@@ -1,0 +1,63 @@
+{%extends "layout.html"%}
+{%block content%}
+
+<h1 style="text-align:center;"><b>OS</b></h1>
+
+<p>
+<b>Python</b>  provides a good amount of support when it comes to operating system tasks and file management. beside the logic of the language itself which makes it easier  to solve long and boring tasks. <br>
+The other advantage of using python for <b>OS</b>  tasks is that we can use it on UNIX / LINUX, Windows and Mac operating systems besdie very few exeptions, so in this short tutorial we are going to explore OS module mostly and a bit of Glob and shutil modules.<br>
+
+Lets look at 10 most or almost useful file operation commands which we might need to use in python codes.
+<b>Os</b>  module is a standard library and its ready to use by using <i><b>import os</b></i>.<br>
+Acording to official documentation OS module provides a portable way of using operating system dependent functionality. and this is mostly the case of use in many scripts.<b></b>
+
+Fast forward <b>glob</b> module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell and <b>shutil</b> module similar to os and glob module offers a number of high-level operations on files and collections of files. In particular, functions are provided which support file copying and removal. <i>For operations on individual files, see also the os module.</i><br>
+
+Before trying os commands on <b>ipython</b> make sure that you already import the modules, this can be done by <i><b>mport os, glob, shutil</b></i> so from now i assume you already imported the modules and there is no need to mention it in our examples.<br>
+
+--------------------------------------------------------------------------------------------------------------<br>
+<b>1) Make  a folder</b> <br>
+In python folders refered as directories.<br>
+<i><b>os.mkdir("directory / folder name")</b></i> the name should pass as string. <br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>2) Move to folder</b><br>
+Get the current path = <i><b>os.getcwd()</b></i><br>
+Chenge to destination path <i><b>os.chdir(destination path)</b></i> <br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>3) Rename a file or folder</b><br>
+<i><b>os.rename(oldname, newname)</b></i><br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>4) List files</b><br>
+Same as unix wildcard the equivalent notation  is <b>*</b>.<br>
+file_list = <i><b>glob.glob("*.py")</b></i> lists all files with python format(extension)<br>
+file_list = <i><b>glob.glob("name*[1-4]*.dat")</b></i><br>
+---------------------------------------------------------------------------------------------------------------<br>
+<b>5) list all files and folders in folder</b><br>
+file_list = <i><b>os.listdir("dir name")</b></i><br>
+file_list = <i><b>os.listdir(os.curdir)</b></i> # current folder <br>
+<i><b>file_list.sort()</b></i> # sort alphabetically <br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>6) Check if file or folder exist</b><br>
+<i><b>if os.path.isfile(filename):</b></i><br>
+    <i><b>....input_file = open(filename, "r")</b></i> <br>
+
+<b>and for checking the directory:</b><br>
+<i><b>if os.path.isdir(directoryname):</b></i><br>
+    <i><b>....filelist = os.listdir(dirname)</b></i><br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>7) Remove files</b><br>
+<i><b>file_list = glob.glob("file_name.pdf")</b></i><br>
+<i><b>for file in file_list:</b></i><br>
+    <i><b>....os.remove(file)</b></i><br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>8) Remove folder and all its subfolders</b><br>
+<i><b>shutil.rmtree(foldername)</b></i> # becareful using this command :) <br>
+--------------------------------------------------------------------------------------------------------------<br>
+<b>9) Copy file</b><br>
+<i><b>shutil.copy("source path name ", "destination path name")</b></i><br>
+
+--------------------------------------------------------------------------------------------------------------<br>
+<b>10) Copy folder and all its subfolders</b><br>
+<i><b>shutil.copytree(source folder, destination folder)</b></i><br>
+</p>
+{%endblock%}

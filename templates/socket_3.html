@@ -1,0 +1,25 @@
+{%extends "layout.html"%}
+{%block content%}
+<h1 style="text-align:center;"><b>Socket<small> 3</small></b></h1><br>
+<a href="{{url_for('socket_2')}}"><b><--</b></a>
+<p>Lets send some message </p>
+<b>Data.</b> when we send message over nodes "sockets" we cany use string format we need to convert them to bytes first, so what we need to do is to <b>encode</b> the string and <b>decode</b> it in other end.
+<br>
+<img src="../static/img/socket/server_code4.jpg" alt=""><br>
+
+so we create a variable simply to hold the message. and by using <b>send()</b> and <b>encode()</b> method we change the string to bytes and send it to specific address:(ip,port,socket).<br>
+by the way:<br>
+<small><b>UTF-8</b> is a variable width character encoding capable <br>
+  of encoding all 1,112,064 valid code points in Unicode <br>
+  using one to four 8-bit bytes. The encoding is defined <br>
+  by the Unicode Standard, and was originally designed by <br>
+  Ken Thompson and Rob Pike. The name is derived from <br>
+  Unicode Transformation Format – 8-bit</small>
+  <small><a href="https://en.wikipedia.org/wiki/UTF-8">wiki</a></small><br>
+
+  And the last thing we need to do is to close the connection. but as long as the while loop is alive the cycle will continue. so lets leave the <b>server</b> side and take care of the client so we can demonstrate the connection in action.<br>
+
+  <a href="{{url_for('socket_2')}}"><-- </a><a href="{{url_for('socket_4')}}"> --></a>
+<br><br>
+
+{%endblock content%}

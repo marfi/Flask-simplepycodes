@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+{%block content%}
+<a href="{{url_for('sqlite_2')}}"><b><--</b></a><br><br>
+<b>D for delete</b>
+<h3><b>--------- Remove record --------</b></h3><br>
+<i><b>cursor.execute("DELETE FROM contacts WJERE name =?",(name,))</b></i>
+<i><b>db.commit()</b></i>
+<p>Similar to update method <i><b>cursor.execute("DELETE FROM table's name  WHERE Name = ?",(record's name,))</b></i></p>
+<i><b>db.commit()</b></i>  to confirm the change in database.
+<p>Of course sqlite has much more commands and in this short article i just scratched the surface. for more information you can check sqlite3 documentation:<a href="https://docs.python.org/3/library/sqlite3.html">Here</a>
+</p>
+
+<h3>Continue to video tutorial</h3>
+<a href="https://www.youtube.com/watch?v=25B5a_-r6FA"><br><img src="../static/img/sqlite/sqlite.jpg" alt="" width="400" height="400"></a><br><br>
+
+
+{%endblock content%}

@@ -1,0 +1,25 @@
+{%extends "layout.html"%}
+{%block content%}
+<h1 style="text-align:center;"><b>Socket<small> 4</small></b></h1><br>
+<a href="{{url_for('socket_2')}}"><-- </a><br>
+
+<b>Client</b><br>
+The client side shares alot of the same concepts and in our case it's very straight forward.<br>
+<img src="../static/img/socket/client.jpg" alt=""><br>
+
+the different is that now we just get our socket to recieve something by connecting to the given ip/port.
+<b>client.recv(1024)</b><small> 1024 is a buffer size</small> will recieve what ever is coming from server side.
+and smply print it out.
+to test our two sockets first run the <b>server</b> socket and then run <b>client</b> socket.<br>
+As out put we should get the message that sent by server.
+of course this was very short introduction on scket programming in python. as always there are a lot more in to it specially in this subject which have deep connection to TCP/IP and netwroeking so extra knowledge on Networking is really a plus.
+so i incurage you to take your time and take a look at python socket module <a href="https://docs.python.org/3/library/socket.html">here</a>.<br><br>
+If you're interested to have a fast general overview on  TCP/IP check out the link below:
+<a href="https://www.itprc.com/tcpipfaq/">itprc</a><br><br>
+
+and finally check out my more indept tutorials for socket programming and remote connection with python:
+<a href="https://www.youtube.com/watch?v=3dvA7OF2xCw"><img src="../static/img/socket/final_tutorial_link.jpg" alt=""></a><br>
+<a href="{{url_for('socket_2')}}"><-- </a><br>
+
+<br><br>
+{%endblock content%}

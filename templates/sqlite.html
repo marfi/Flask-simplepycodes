@@ -1,0 +1,55 @@
+{%extends "layout.html"%}
+{%block content%}
+
+  <h1 style="text-align:center;"><b>SQLite</b></h1>
+  <video width="400" controls>
+  <source src="../static/videos/sqlite-demo.ogg" type="video/mp4">
+  </video><br>
+  <small>Final project: Basic contact manager with SQLite "custom utility shell"</small><br>
+  <a href="https://www.youtube.com/watch?v=25B5a_-r6FA&t=883s">Escape and jump to Video tutorial</a><br><br>
+
+  <p style="text-align:left;">
+    <b>Sqlite</b> is a <b>Relational database management system</b> created by <b>D. Richard Hipp.</b> basically <b>SQL</b> stands for <b>Structured Query Language</b> which written in <b>C</b>. <b>SQLite</b> is a fast, lightway serverless database system, its cross platform and easy to use.
+    <b>Sqlite3</b> module was written by <b>Gerhard Häring</b>.
+    these aspects makes it perfect match with python, and the best news is that its part of the standard library! so there is zero configuration needed. in this tutorial we are going to Create simple interactive shell for sqlite3. we will learn how to create and connect an object to sqlite and how to insert, remove and list data in sqlite3 object.
+  </p>
+  <h3><b> <font color="red"> CRUD </font></b></h3>
+  <p style="text-align:left;">
+    Whats CRUD?
+    CRUD means Create, Read, Update, Delete, and it can mean different things in different systems, But in SQLite (SQL family) it is commonly considered four main operations on table records.
+  </p>
+  <p style="text-align:left;">So naturally if we want to corporate any SQL database with in our codes, where it is SQL, MySql, PostgreSQL or in our case
+  SQLite we should be able to understand and execute basic database operations</p>
+  <p><b>C for create.</b></p>
+  <p>First of all as we are using SQLite3 which is part of the Python standard library we need to Import the module and create a connection Object file.<small>(connection object which is basically database representation in stand alone file.)</small></p>
+  <p>Next we call cursor method.<small>(special method to execute SQL commands)</small></p>
+  <p>Code:</p>
+  <p<i><b>import sqlite3</b></i></p>
+  <p><i><b>connection = sqlite3.connect("db")</b></i></p>
+  <p><i><b>cursor = connection.cursor()</b></i></p>
+  <p>now we have connection object and cursor method which is kind a sqlite3 command line, we can create and manipulate data in our database</p>
+  <h3><b>Table and records.</b></h3>
+  <p>Table is where we define the structure of database, so basically we are declaring variables and datatypes. for example: we wanna have contacts manager then at least we need to have two variables <b>Name</b> and <b>Phone</b>,
+     lets create a table for these two variables in sqlite3.</p>
+  <h3><b>---------- Create table ----------</b></h3>
+  <i><b>cursor.execute("""CREATE TABLE contacts (Name Text, phone TEXT)***)</b></i>
+  <p>Lets take a look at data types in Sqlite3</p>
+
+  <b>1 NULL</b> The value is a NULL value.<br>
+
+  <b>2 INTEGER</b> The value is a signed integer, stored in 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of the value.<br>
+
+  <b>3 REAL</b> The value is a floating point value, stored as an 8-byte IEEE floating point number.<br>
+
+  <b>4 TEXT</b> The value is a text string, stored using the database encoding (UTF-8, UTF-16BE or UTF-16LE)<br>
+
+  <b>5 BLOB</b> The value is a blob of data, stored exactly as it was input.<br>
+
+  <b>Basic structure of creating table in SQLite</b><br>
+  using <b><i>cursor.execute("""CREATE TABLE name of table (variable Data type)""" )</i></b><br>
+  <p>and we verify the changes by <b>commit()</b> method</p>
+  <i><b>db.commit()</b></i>
+
+  we created a table contacts with two records: Name with String data type (TEXT) to store the contact names and Phone with String data type (TEXT) to store phone numbers. we didnt use INTEGER data type because we wont need to run any numerical operation on our data.<br>
+  <a href="{{url_for('sqlite_2')}}"><b>--></b></a><br><br>
+{%endblock%}

@@ -1,0 +1,42 @@
+{%extends "layout.html"%}
+{%block content%}
+
+
+<h1 style="text-align:center;"><b>Tkinter <small>5</small></b></h1>
+<a href="{{url_for('tkinter_4')}}"><b><--</b></a><br><br>
+
+
+<b>tkinter.IntVar()</b>and <b>radiobutton</b><br><br>
+
+Another very useful tool that comes with tkinter is radiobuttons, which can be used as choice between different options, the name of radiobutton cames from old radios which had buttons to choose between different channels, so each time you push one button the previous one would popped out by this way there would be only one choice between many options.<br>
+
+<b>tkinter.InitVar() and tracing</b>.<br>
+<b>Tracing</b> is a method that you can update a widget by changing its value in runtime. as we sow in previous example with <b>tkinter.StringVar()</b>.<br>
+in Tkinter there are 4 <b>types</b> of variable Classes:<br>
+
+<b>1)BooleanVar</b><br>
+
+<b>2)DoubleVar</b><br>
+
+<b>3)IntVar</b><br>
+
+<b>4)StringVar</b><br>
+
+with radiobuttons we can use <b>set()</b> method to change  the IntVariable in to different values during the run time.<br>
+
+In the next example we are making another gui program which have two options with two radiobuttons and two button widget one for showing the choice we make and another to quit the program.
+
+and this time we can use another method to exit the program using <b>destroy()</b> method which can be directly interact with button as a command.<br><br>
+
+<img src="../static/img/tkinter/10.jpg" alt=""><br><br>
+<p>I hope this short introduction could help you to get some ideas about GUI programming with tk, Of course there are a lot more to cover.</p>
+<p>for more information check out the official documentation.</p>
+<a href="https://docs.python.org/3/library/tk.html">Here</a><br><br><br>
+<h3>Continue to Tkinter video tutorials</h3><br><a href="https://www.youtube.com/watch?v=SQN0sx7mXeM&t=3s"><br><img src="../static/img/tkinter/video.jpg" alt="" width="400" height="400"></a><br><br>
+or <br>
+
+<a href="https://www.youtube.com/watch?v=6sxOsKGVM9w">Continue to Bookstore tutorial with Tkinter and SQLite</a><br><br>
+<a href="{{url_for('tkinter_4')}}"><b><--</b></a><br><br>
+
+
+{%endblock content%}

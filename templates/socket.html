@@ -1,0 +1,37 @@
+{%extends "layout.html"%}
+{%block content%}
+
+
+<h1 style="text-align:center;"><b>Socket</b></h1>
+<p>Escape and continue to video tutorial</p>
+<a href="https://www.youtube.com/watch?v=u-TMwKeUzEI&t=232s"><img src="../static/img/socket/server.jpg" alt="", height="400" width="600"></a><br><br>
+<p>This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms.
+The Python interface is a straightforward transliteration of the Unix system call and library interface for sockets to Python’s object-oriented <br>
+style: the socket() function returns a socket object whose methods implement the various socket system calls. Parameter types are somewhat <br>
+ higher-level than in the C interface: as with read() and write() operations on Python files, buffer <br> allocation on receive operations is automatic, and buffer length is implicit on send operations.
+</p>
+<a href="https://docs.python.org/3/library/socket.html"><small>Source</small></a>
+
+<p>Before we start to write some basic Server/Client script lets take a quick look at some of the functions available in Socket module:</p>
+<ol>
+  <li><b>socket()</b> -- create a new socket object</li>
+  <li><b>socketpair()</b> -- create a pair of new socket objects</li>
+  <li><b>fromfd()</b> -- create a socket object from an open file descriptor</li>
+  <li><b>fromshare()</b> -- create a socket object from data received from socket.share</li>
+  <li><b>gethostname()</b> -- return the current hostname</li>
+  <li><b>gethostname()</b> -- return the current hostname</li>
+  <li><b>gethostbyname()</b> -- map a hostname to its IP number</li>
+  <li><b>gethostbyaddr()</b> -- map an IP number or hostname to DNS info</li>
+  <li><b>getservbyname()</b> -- map a service name and a protocol name to a port number</li>
+  <li><b>getprotobyname()</b> -- map a protocol name (e.g. 'tcp') to a number</li>
+  <li><b>ntohs(), ntohl()</b> -- convert 16, 32 bit int from network to host byte order</li>
+  <li><b>htons(), htonl()</b> -- convert 16, 32 bit int from host to network byte order</li>
+  <li><b>net_aton()</b> -- convert IP addr string (123.45.67.89) to 32-bit packed format</li>
+  <li><b>net_ntoa()</b> -- convert 32-bit packed format IP to string (123.45.67.89)</li>
+  <li><b>socket.getdefaulttimeout()</b> -- get the default timeout value</li>
+  <li><b>socket.setdefaulttimeout()</b> -- set the default timeout value</li>
+</ol>
+<a href="https://github.com/python/cpython/blob/3.7/Lib/socket.py"><small>Source</small></a><br>
+<a href="{{url_for('socket_2')}}"><b>--></b></a>
+<br><br>
+{%endblock%}
