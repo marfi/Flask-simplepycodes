@@ -1,3 +1,7 @@
+"""
+Run py view.py, in linux python3 view.py 
+"""
+
 from app import *
 from forms import *
 
