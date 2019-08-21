@@ -8,4 +8,4 @@ from wtforms.validators import InputRequired, Email, Length
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "dskjhfsdkjfhlskdj"
+app.config["SECRET_KEY"] ="add your secret key"
